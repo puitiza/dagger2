@@ -2,10 +2,6 @@ package com.puitiza.dagger2.di;
 
 import android.app.Application;
 
-import com.puitiza.dagger2.di.DaggerMotorComponent;
-import com.puitiza.dagger2.di.MotorComponent;
-import com.puitiza.dagger2.di.MotorModule;
-
 public class MotorApplication extends Application {
     private MotorComponent motorComponent;
 

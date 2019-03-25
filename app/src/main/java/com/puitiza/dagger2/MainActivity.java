@@ -7,11 +7,18 @@ import android.widget.Toast;
 import com.puitiza.dagger2.di.MotorApplication;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    @Named("Gasolina")
     @Inject
     Motor motor;
+
+    @Inject
+    Coche coche;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         ((MotorApplication)getApplication()).getMotorComponent().inject(this);
         Toast.makeText(MainActivity.this,motor.getTipoMotor(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,coche.getMotor(),Toast.LENGTH_SHORT).show();
     }
 }
